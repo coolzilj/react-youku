@@ -1,0 +1,29 @@
+{
+  "name": "react-youku",
+  "version": "0.0.0",
+  "description": "react-youku",
+  "main": "dist/react-youku.min.js",
+  "homepage": "https://github.com/coolzilj/react-youku",
+  "authors": [
+    "Jin Liu"
+  ],
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "react",
+    "react-component"
+  ],
+  "license": "MIT",
+  "ignore": [
+    ".editorconfig",
+    ".gitignore",
+    "package.json",
+    "src",
+    "node_modules",
+    "example",
+    "test"
+  ]
+}

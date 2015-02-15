@@ -1,6 +1,8 @@
-var React = require('react');
+!function(e){if("object"==typeof exports&&"undefined"!=typeof module)module.exports=e();else if("function"==typeof define&&define.amd)define([],e);else{var f;"undefined"!=typeof window?f=window:"undefined"!=typeof global?f=global:"undefined"!=typeof self&&(f=self),f.ReactYouku=e()}}(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+(function (global){
+var React = (typeof window !== "undefined" ? window.React : typeof global !== "undefined" ? global.React : null);
 
-var ReactYouku = React.createClass({
+var ReactYouku = React.createClass({displayName: "ReactYouku",
   propTypes: {
     vid: React.PropTypes.string,
     width: React.PropTypes.number,
@@ -17,13 +19,13 @@ var ReactYouku = React.createClass({
   render: function() {
     var videoSrc = "http://player.youku.com/embed/" + this.props.vid;
     return (
-        <iframe 
-          src={videoSrc} 
-          height={this.props.height} 
-          width={this.props.width} 
-          frameborder="0" 
-          allowfullscreen 
-        />
+        React.createElement("iframe", {
+          src: videoSrc, 
+          height: this.props.height, 
+          width: this.props.width, 
+          frameborder: "0", 
+          allowfullscreen: true}
+        )
     );
 
   }
@@ -57,3 +59,7 @@ module.exports = ReactYouku;
  * 搜狐
  * <object width=1300 height=451><param name="movie" value="http://share.vrs.sohu.com/2237575/v.swf&topBar=1&autoplay=false&plid=8373574&pub_catecode=0&from=page"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><param name="wmode" value="Transparent"></param><embed width=1300 height=451 wmode="Transparent" allowfullscreen="true" allowscriptaccess="always" quality="high" src="http://share.vrs.sohu.com/2237575/v.swf&topBar=1&autoplay=false&plid=8373574&pub_catecode=0&from=page" type="application/x-shockwave-flash"/></embed></object>
  */
+
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{}]},{},[1])(1)
+});
